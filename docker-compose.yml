@@ -1,16 +1,25 @@
-# Run this app locally using: docker-compose up --build
+# Run this app locally using: docker-compose up -d --build
 
 version: '3'
 services:
   app:
+    container_name: sociahigh.user.api
     build:
       context: ./
       dockerfile: Dockerfile
-    command: npm run start:development
+    image: sociahigh.user.api
+    command: npm run start:production
     ports:
       - 6100:6100
     environment:
-      NODE_ENV: development
+      NODE_ENV: production
       PORT: 6100
     volumes:
       - ./:/app/
+    networks:
+      sociahigh-network:
+        ipv4_address: '10.1.0.10'
+networks:
+  sociahigh-network:
+    external: true
+    name: 'sociahigh-network'

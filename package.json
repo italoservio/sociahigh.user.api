@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start:development": "nodemon ./src/config/bootstrap.ts",
-    "start:production": "node ./dist/config/bootstrap.js"
+    "start:production": "node ./dist/src/config/bootstrap.js"
   },
   "keywords": [],
   "author": "",
