@@ -1,0 +1,16 @@
+# Run this app locally using: docker-compose up --build
+
+version: '3'
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: npm run start:development
+    ports:
+      - 6100:6100
+    environment:
+      NODE_ENV: development
+      PORT: 6100
+    volumes:
+      - ./:/app/
