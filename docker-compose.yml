@@ -8,7 +8,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     image: sociahigh.user.api
-    command: npm run start:production
+    command: npm run start:prod
     ports:
       - 6100:6100
     environment:
