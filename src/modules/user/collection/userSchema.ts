@@ -6,7 +6,7 @@ export const userSchema = new mongoose.Schema({
   birthDate: {type: Date, required: true},
   email: {type: String, required: true},
   password: {type: String, required: true},
-  profilePicture: {type: String, required: true},
+  profilePicture: {type: String, required: false},
   createdAt: {type: Date, required: true, default: Date.now()},
   updatedAt: {type: Date, required: true, default: Date.now()},
 });

@@ -8,5 +8,5 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(`${API_PREFIX}/user`, userRouter);
+app.use(API_PREFIX, userRouter);
 app.listen(process.env.PORT ?? 6100);
